@@ -1,0 +1,50 @@
+.post-item {
+    margin: 0 auto;
+    max-width: 100%;
+    box-shadow: none;
+    padding: 8px;
+    border-radius: none;
+    pointer-events: none;
+}
+.post-item__body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.post-item__title {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 4px 0;
+}
+.post-item__text {
+    line-height: 30px;
+}
+.page__comments{
+    font-size: 2em;
+    padding: 0 0 10px 0;
+}
+.comments__body{
+    border-top: 1px black solid;
+    margin-top: 10px;
+    padding: 20px 0 0 0;
+}
+.comments__body>*:not(:last-child){
+    margin-bottom: 20px;
+}
+.comment-item {
+    box-shadow: 0 0 2px black;
+    padding: 8px;
+    border-radius: 5px;
+}
+.comment-item__name {
+    font-weight: 700;
+    font-size: 1.2em;
+}
+.comment-item__email {
+    font-weight: 100;
+    font-size: 0.9em;
+}
+.comment-item__text {
+    padding: 10px 0;
+    font-size: 1.1em;
+}

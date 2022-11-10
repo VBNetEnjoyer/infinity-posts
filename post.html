@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/nullstyle.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/post.css">
 </head>
 <body>
     <div class="wrapper">
@@ -22,14 +23,19 @@
                 <div class="page__body" id="app">
                     
                 </div>
+                <div class="page__comments comments">
+                    Comments:
+                    <div class="comments__body"></div>
+                </div>
             </div>
         </main>
     </div>
+    <script src="./js/comments.js" type="module"></script>
     <script src="./js/api.js" type="module"></script>
     <script src="./js/post.js" type="module"></script>
-    <script src="./js/main.js" type="module"></script>
+    <script src="./js/postApp.js" type="module"></script>
     <script type="module">
-        import createApp from "./js/main.js";
+        import createApp from './js/postApp.js';
 
         createApp();
     </script>

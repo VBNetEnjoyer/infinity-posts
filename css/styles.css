@@ -1,6 +1,5 @@
 *{
     font-size: 18px;
-    font-family: cursive;
 }
 .container{
     margin: 0 auto;
@@ -22,6 +21,7 @@ header{
         text-align: center;
         padding: 0;
     }
+   
 }
 @media(max-width: 967px) {
     .header__container{
@@ -30,14 +30,26 @@ header{
     .header__logo{
         padding: 10px;
     }
+
 }
 .header__body{
     background-color: #fff;
     padding: 20px 0;
     border-bottom: 1px solid black;
 }
+@media (max-width: 967px) {
+    .header__body{
+        padding: 0;
+    }
+}
 .page__container{
     margin-top: 80px;
+}
+@media( min-width: 976px){
+    .page__container{
+        margin-top: 100px;
+    }
+
 }
 .page__body{
     padding: 20px 0 20px 0;

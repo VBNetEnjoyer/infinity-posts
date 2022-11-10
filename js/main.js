@@ -1,6 +1,5 @@
-import createPost from './post.js'
-
-const URL = "https://gorest.co.in/public-api/posts";
+import createPost from './post.js';
+import api from './api.js';
 
 async function createApp(){
     const page = document.documentElement;
@@ -8,7 +7,7 @@ async function createApp(){
     let pageIndex = 1;
 
     const addPost = async function(pageIndex=1){
-        let postsList = await getPosts(pageIndex);
+        let postsList = await api.getPosts(pageIndex);
         postsList.forEach(element => {
             app.append(createPost(element, onPostClick)); 
         });
@@ -20,26 +19,9 @@ async function createApp(){
     });
 
     async function onPostClick(postId){
-        let post = await getPost(postId);
-        console.log(post);
+        let post = await api.getPost(postId);
+        window.location.href = `../post.html?postId=${postId}`;
     }
-    
 }
 
-async function getPosts(pageIndex = 1){
-    let response = await fetch(URL+`?page=${pageIndex}`);
-    let postsList = (await response.json()).data;
-
-    return postsList; 
-}
-
-async function getPost(postId){
-    let response = await fetch(URL+`/${postId}`);
-    let post = (await response.json()).data;
-
-    return post;
-}
-
-
-
-createApp();
+export default createApp;
